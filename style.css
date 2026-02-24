@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(145deg, #f6f9fc 0%, #edf2f9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+.presentation-container {
+    max-width: 1280px;
+    width: 100%;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(16px);
+    border-radius: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25), inset 0 1px 2px rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.6);
+    overflow: hidden;
+    padding: 2rem 2.5rem;
+}
+/* slide wrapper */
+.slide-viewport {
+    position: relative;
+    min-height: 600px;
+    transition: opacity 0.2s ease;
+}
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+.slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid rgba(0,60,110,0.15);
+    padding-bottom: 1rem;
+}
+.slide-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0b2b44, #1b4a6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+.slide-counter {
+    background: #e9ecf2;
+    padding: 0.5rem 1.2rem;
+    border-radius: 60px;
+    font-weight: 600;
+    color: #1e4c73;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+.content {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #1f3b4f;
+}
+h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    color: #0a3146;
+}
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1.2rem 0 0.8rem;
+    color: #144a6f;
+}
+ul, p {
+    margin-bottom: 1rem;
+}
+li {
+    margin-left: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+.card {
+    background: white;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    box-shadow: 0 12px 30px rgba(0, 30, 60, 0.1);
+    border: 1px solid rgba(0,110,200,0.1);
+}
+.badge {
+    display: inline-block;
+    background: #1f5f8f;
+    color: white;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    border-radius: 60px;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    margin-right: 0.5rem;
+}
+.insight {
+    background: #e5f0fb;
+    border-left: 5px solid #1f5f8f;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    margin: 1.5rem 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+th {
+    background: #1f5f8f;
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+}
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #dbe4ed;
+}
+.code-figure {
+    background: #0b1f2b;
+    color: #bbd9f5;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.mermaid {
+    background: #fafdff;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.nav-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+.nav-btn {
+    background: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    font-size: 2rem;
+    color: #1f5f8f;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 30, 60, 0.15);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-btn:hover {
+    background: #1f5f8f;
+    color: white;
+    transform: scale(1.07);
+}
+.page-indicators {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: #b3c7db;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.dot.active-dot {
+    background: #1f5f8f;
+    width: 28px;
+}
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #627d99;
+}
+hr {
+    border: 1px solid rgba(0,60,110,0.15);
+    margin: 1.5rem 0;
+}
